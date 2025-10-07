@@ -34,9 +34,8 @@ function Calculator() {
 
   return (
     <div className="calculator__inner">
-        <div class="inner">
+        <div className="inner">
             <h2 className="heading">Surfboard Volume Calculator</h2>
-
             <div className="form__group">
                 <label htmlFor="length">
                 <span>Length</span><span className="number"><span class="unit">feet</span>{surfboardLength[lengthIndex]?.label}</span>

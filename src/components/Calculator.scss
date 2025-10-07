@@ -13,16 +13,20 @@
     &__inner {
         font-family: $font-header;
         font-size: 18px;
-        margin: 0 1rem;
         max-width: 500px;
-        padding: 3rem 0;
+        padding: 3rem 1rem;
+        width: 100%;
+
+        position: sticky;
+        top: -1px;
 
         @include breakpoint(small) {
-            margin: 0 2rem;
+            margin: 0 auto;
+            padding: 3rem 2rem;
         }
         
         @include breakpoint(medium) {
-            margin: 0 auto;
+            position: static;
             padding: 3.5rem;
             display: flex;
             align-items: center;
@@ -33,25 +37,46 @@
             margin-left: calc((100vw - 1000px)/ 2);
             padding: 3.5rem 6rem;
         }
+
+        .inner {
+            position: relative;
+            width: 100%;
+
+            @include breakpoint(medium) {
+                padding-top: 1rem;
+            }
+        }
     }
 
     .heading {
-        font-family: $font-base;
-        font-size: 38px;
+        font-size: clamp(32px, 10vw, 70px);
         font-weight: $font-weight-extrabold;
         line-height: 1;
         letter-spacing: .6px;
         margin-bottom: 3rem;
         text-transform: uppercase;
+
+        @include breakpoint(medium) {
+            position: absolute;
+            left: 0;
+            top: -100px;
+            width: max-content;
+        }
     }
 
     &__img {
-        background-image: url('/images/bg-3.jpg');
-        background-size: cover;
-        background-position: top right;
+        background-image: url('/images/background.webp');
+        background-position: top center;
         background-repeat: no-repeat;
-        height: 100vh;
+        background-size: cover;
+        height: 60vh;
+        position: relative;
         width: 100%;
+        
+        @include breakpoint(medium) {
+            height: 100vh;
+            position: static;
+        }
     }
 }
 
