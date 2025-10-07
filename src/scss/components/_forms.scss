@@ -1,0 +1,117 @@
+@use '../functions/rem' as *;
+@use '../_vars' as *;
+@use '../mixins/breakpoint' as *;
+
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+    background: transparent; 
+    border-color: transparent;
+    color: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+// Thumb
+input[type=range]::-webkit-slider-thumb {
+    background-color: $white;
+    border: 5px solid $black;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 17px;
+    margin-top: -6.5px;
+    width: 17px;
+    -webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-thumb {
+    background-color: $white;
+    border: 5px solid $black;
+    border-radius: 50%;
+    height: 8px;
+    width: 8px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-thumb {
+    background: $white;
+    border: 5px solid $black;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 17px;
+    width: 17px;
+}
+
+// Track
+input[type=range]::-webkit-slider-runnable-track {
+    background: rgba($black, .2);
+    border-radius: 0;
+    cursor: pointer;
+    height: 3px;
+    width: 100%;
+}
+
+input[type=range]::-moz-range-track {
+    background: rgba($black, .2);
+    border-radius: 0;
+    cursor: pointer;
+    height: 3px;
+    width: 100%;
+}
+
+input[type=range]::-ms-track {
+    background: rgba($black, .2);
+    border-color: transparent;
+    border-radius: 0;
+    color: transparent;
+    cursor: pointer;
+    height: 3px;
+    width: 100%;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: $black;
+  border-radius: 0;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: $black;
+}
+input[type=range]::-ms-fill-upper {
+  background: $black;
+  border-radius: 0;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: $black;
+  height: 3px;
+}
+
+// 
+input[type="range"]::-moz-range-progress {
+  background-color:  $black;
+  height: 3px;
+}
+
+input[type="range"] {
+    background: linear-gradient(
+        to right,
+        $black 0%,
+        $black calc(var(--val, 0) * 1%),
+        rgba($black, .2) calc(var(--val, 0) * 1%),
+        rgba($black, .2) 100%
+    );
+    height: 3px;
+    width: 100%;
+    -webkit-appearance: none;
+}
+

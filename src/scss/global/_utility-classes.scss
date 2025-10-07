@@ -1,0 +1,6 @@
+@use '../mixins/accessible-hide' as *;
+
+.u-accessible-hide,
+.screen-reader-text {
+    @include accessible-hide();
+}

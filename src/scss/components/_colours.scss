@@ -1,0 +1,9 @@
+@use '../functions/rem' as *;
+@use '../_vars' as *;
+@use '../mixins/breakpoint' as *;
+
+.bg {
+    &--white {
+        background-color: $white;
+    }
+}

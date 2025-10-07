@@ -1,0 +1,30 @@
+@use '../functions/rem' as *;
+@use '../_vars' as *;
+@use '../mixins/breakpoint' as *;
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+    }
+}
+
+.grid__item {
+    min-width: rem(200px);
+}
+
+@supports (display: grid) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        &__item {
+            display: block;
+            width: 100%;
+        }
+    }
+}

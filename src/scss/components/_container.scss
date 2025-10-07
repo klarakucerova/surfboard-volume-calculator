@@ -1,0 +1,9 @@
+@use '../functions/rem' as *;
+@use '../_vars' as *;
+@use '../mixins/breakpoint' as *;
+
+.container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}

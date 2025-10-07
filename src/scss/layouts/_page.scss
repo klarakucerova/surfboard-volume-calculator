@@ -1,0 +1,20 @@
+@use '../functions/rem' as *;
+@use '../_vars' as *;
+@use '../mixins/breakpoint' as *;
+
+.page {
+    .calculator {
+      position: sticky;
+      top: -1px;
+    }
+    
+    .description {
+      padding-top: 1px;
+      position: relative;
+      background-color: $white;
+      z-index: 1;
+      box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, 0.08);
+      width: 100%;
+      min-height: 100vh;
+    }
+}

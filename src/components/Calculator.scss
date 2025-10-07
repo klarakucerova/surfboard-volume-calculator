@@ -1,0 +1,102 @@
+@use '../scss/functions/rem' as *;
+@use '../scss/_vars' as *;
+@use '../scss/mixins/breakpoint' as *;
+
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @include breakpoint(medium) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__inner {
+        font-family: $font-header;
+        font-size: 18px;
+        margin: 0 1rem;
+        max-width: 500px;
+        padding: 3rem 0;
+
+        @include breakpoint(small) {
+            margin: 0 2rem;
+        }
+        
+        @include breakpoint(medium) {
+            margin: 0 auto;
+            padding: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        @include breakpoint(1600px) {
+            margin-left: calc((100vw - 1000px)/ 2);
+            padding: 3.5rem 6rem;
+        }
+    }
+
+    .heading {
+        font-family: $font-base;
+        font-size: 38px;
+        font-weight: $font-weight-extrabold;
+        line-height: 1;
+        letter-spacing: .6px;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+    }
+
+    &__img {
+        background-image: url('/images/bg-3.jpg');
+        background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+.form__group {
+    font-weight: $font-weight-medium;
+    margin-bottom: 1.5rem;
+
+    label {
+        align-items: flex-end;
+        display: inline-flex;
+        justify-content: space-between;
+        line-height: 1;
+        width: 100%;
+    }
+
+    .number {
+        line-height: 1;
+        text-align: right;
+    }
+
+    .unit {
+        display: block;
+        font-family: $font-base;
+        font-size: 13px;
+        margin-bottom: 3px;
+    }
+}
+
+.volume {
+    align-items: flex-end;
+    display: inline-flex;
+    font-size: 26px;
+    font-weight: $font-weight-bold;
+    justify-content: space-between;
+    line-height: 1;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    width: 100%;
+
+    .unit {
+        display: block;
+        font-family: $font-base;
+        font-size: 14px;
+        font-weight: $font-weight-medium;
+        margin-bottom: 3px;
+        text-transform: lowercase;
+    }
+}
