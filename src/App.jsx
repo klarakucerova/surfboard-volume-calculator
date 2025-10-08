@@ -10,7 +10,9 @@ function App() {
 
         <div className="App calculator">
             <Calculator />
-            <div className="calculator__img"></div>
+            <div className="calculator__img">
+                <span className="author">Photo by <a href="http://www.andrewshield.com.au/" target="_blank">Andrew Shields</a></span>
+            </div>
         </div>
 
         <div className="description">

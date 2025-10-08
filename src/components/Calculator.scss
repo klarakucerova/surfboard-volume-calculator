@@ -77,6 +77,18 @@
             height: 100vh;
             position: static;
         }
+        
+        .author {
+            bottom: 1rem;
+            color: $black;
+            font-size: 12px;
+            left: 1rem;
+            position: absolute;
+            
+            @include breakpoint(medium) {
+                left: calc(50% + 1.5rem);
+            }
+        }
     }
 }
 
